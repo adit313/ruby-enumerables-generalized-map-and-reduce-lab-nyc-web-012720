@@ -10,7 +10,7 @@ def map (source)
   return result
 end
 
-def reduce (source, starting_point = 0)
+def reduce (source, starting_point = nil)
   result = starting_point
   i = 0
   while i < source.length do
