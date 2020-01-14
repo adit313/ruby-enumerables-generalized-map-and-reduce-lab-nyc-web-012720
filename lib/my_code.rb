@@ -9,4 +9,3 @@ def map (source)
   end
   return result
 end
-    
