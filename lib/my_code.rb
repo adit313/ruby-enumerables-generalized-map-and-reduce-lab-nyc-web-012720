@@ -9,3 +9,13 @@ def map (source)
   end
   return result
 end
+
+def map (source, starting_point = 0)
+  result = []
+  i = starting_point
+  while i < source.length do
+    result.push(yield(source[i]))
+    i += 1
+  end
+  return result
+end
