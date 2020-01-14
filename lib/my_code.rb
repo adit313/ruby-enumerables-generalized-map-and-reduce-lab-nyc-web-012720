@@ -11,11 +11,17 @@ def map (source)
 end
 
 def reduce (source, starting_point = 0)
+  if sv 
   result = starting_point
   i = 0
+  else 
+  result = source[0]
+  i = 1
+  
   while i < source.length do
     result = yield(result, source[i])
     i += 1
   end
   return result
+  
 end
