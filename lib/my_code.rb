@@ -10,12 +10,11 @@ def map (source)
   return result
 end
 
-def reduce (source, starting_point = nil)
-  starting_point = 0 unless starting_point
-  
-  i = 0
+def reduce (source, starting_point = 0)
+  result = 0
+  i = starting_point
   while i < source.length do
-    result = yield(result, source[i])
+    reult = yield(result, source[i])
     i += 1
   end
   return result
