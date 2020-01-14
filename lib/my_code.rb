@@ -11,10 +11,10 @@ def map (source)
 end
 
 def map (source, starting_point = 0)
-  result = []
+  result = 0
   i = starting_point
   while i < source.length do
-    result.push(yield(source[i]))
+    yield(result, source[i])
     i += 1
   end
   return result
