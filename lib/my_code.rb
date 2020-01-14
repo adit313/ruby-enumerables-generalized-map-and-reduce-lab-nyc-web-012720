@@ -11,7 +11,7 @@ def map (source)
 end
 
 def reduce (source, starting_point = 0)
-  if sv 
+  if starting_point 
   result = starting_point
   i = 0
   else 
